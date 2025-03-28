@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrath & Glory Character Creator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Wrath & Glory Character Creator (Simplified)</h1>
+
+        <div class="section">
+            <label for="tierSelect">Select Tier:</label>
+            <select id="tierSelect">
+                <option value="">-- Select Tier --</option>
+                <option value="1">Tier 1 (100 XP)</option>
+                <option value="2">Tier 2 (200 XP)</option>
+                <option value="3">Tier 3 (300 XP)</option>
+                <option value="4">Tier 4 (400 XP)</option>
+            </select>
+        </div>
+
+        <div class="section">
+            <label for="archetypeSelect">Select Archetype:</label>
+            <select id="archetypeSelect" disabled>
+                <option value="">-- Select Tier First --</option>
+            </select>
+        </div>
+
+        <div id="xpTracker" class="section">
+            Starting XP: <span id="startingXP">0</span> | Remaining XP: <span id="remainingXP">0</span>
+        </div>
+
+        <div id="characterDetails" class="section info-box">
+            <h2>Archetype Details</h2>
+            <p><strong>Name:</strong> <span id="archName">-</span></p>
+            <p><strong>Species:</strong> <span id="archSpecies">-</span></p>
+            <p><strong>Faction:</strong> <span id="archFaction">-</span></p>
+            <p><strong>Keywords:</strong> <span id="archKeywords">-</span></p>
+            <p><strong>Ability:</strong> <span id="archAbility">-</span></p>
+            <p><strong>Wargear:</strong> <span id="archWargear">-</span></p>
+            <p><strong>Influence Mod:</strong> <span id="archInfluence">-</span></p>
+        </div>
+
+        <div id="customization" class="section">
+            <h2>Customize Stats (Simplified)</h2>
+            <div class="stats-grid">
+                <div class="stats-column">
+                    <h3>Attributes</h3>
+                    <ul id="attributesList"></ul>
+                </div>
+                <div class="stats-column">
+                    <h3>Skills</h3>
+                    <ul id="skillsList"></ul>
+                </div>
+            </div>
+             <p class="note">Note: Simplified XP costs used. Base stats start at 1 (Attr) / 0 (Skill).</p>
+        </div>
+
+         <div id="characterSheetOutput" class="section info-box">
+             <h2>Character Summary</h2>
+             <pre id="outputArea">Select an Archetype to begin...</pre>
+         </div>
+
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
